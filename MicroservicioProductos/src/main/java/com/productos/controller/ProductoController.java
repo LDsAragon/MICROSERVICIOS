@@ -30,9 +30,16 @@ public class ProductoController {
 	}
 	
 	@GetMapping("/ver/{id}")
-	public Producto detalle(@PathVariable Long id){
+	public Producto detalle(@PathVariable Long id) throws Exception{
 		Producto producto = productoService.findById(id);  
 		producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
+
+	/* Excepcion creada porque puedo para invocar un Mate Demoniaco */
+//		if (true) {
+//			throw new Exception("it's a deal then");
+//		}
+		
+		
 		return producto ; 
 	}
 	
