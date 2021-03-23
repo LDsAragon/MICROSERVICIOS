@@ -40,6 +40,14 @@ public class ProductoController {
 //		}
 		
 		
+	/* Excepcion creacion de un timeout */
+//		try {
+//			Thread.sleep(3000L) ; 
+//		} catch (Exception e) {
+//			e.printStackTrace() ; 
+//		}
+		
+		
 		return producto ; 
 	}
 	
